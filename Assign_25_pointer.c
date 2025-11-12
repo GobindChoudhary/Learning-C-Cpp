@@ -1,198 +1,178 @@
-// write a function to swap values of two int variable (TSRN)
-
 #include <stdio.h>
-#include <string.h>
 
-// void swap(int *a, int*b); 
-// void input(int *a, int b);
-// void display(int *a, int size);
-// int length(char *str);
-// void arrInput(int **p, int n, int size[]);
-// void search_all_occurrences(char *str, char ch, int *arr);
-// char* toUpperCase(char *str, int l );
-// char* toLowerCase(char *str, int l );
-void subString(char *str, int s,int e, char *substr);
-
-
-
+//  void swapStr(char *str1, char *str2);
+//  void merge(int *arr1, int size1, int *arr2, int size2, int  *arr3);
+// int middleValue(int arr[], int n);
+// void highestMarks(int *ptr[],int n,int size[]);
+void sort(int *ptr,int size);
 int main(){
-// 1.swap to variable
-    // int x = 10,y=20;
-    // swap(&x,&y);
-    // printf("%d %d",x,y);
 
+//  6.Swap string of two char Array
+    // char str1[20], str2[20];
+    // printf("Enter string one: \n");
+    // fgets(str1,20,stdin);
+    // printf("Enter string two: \n");
+    // fgets(str2,20,stdin);
+    // // swapStr(str1,str2);
+    //  printf("%s",str1);
+    //  printf("%s",str2);
 
-// input array elements
-    // int a[10];
-    // input(a,10);
-    // display(a,10);
-
-// string length
-//    int l;
-//    char str[10];
-//    fgets(str,10,stdin);
-//    str[strcspn(str, "\n")] = '\0';
-//    l = length(str);
-//    printf("%d",l); 
-
-
-// array of pointers
-
-//    int *p[4];
-//    int a[3], b[4],c[5],d[2];
-//    int size[] = {3,4,5,2};
-//    p[0] = a;
-//    p[1] = b;
-//    p[2] = c;
-//    p[3] = d;
-
-//    arrInput(p,4,size);
-//    for (int i = 0; i < 4; i++)
-//         display(p[i],size[i]);
-
-
-// 2. search all occurrences of an character in a string
-
-    //  char str[100], ch ;
-    //  int arr[100] = {0};
+// 7. Merge two array in a given array
+    //  int size1,size2;
+    //  printf("Enter the size first array\n");
+    //  scanf("%d",&size1);
+    //  printf("Enter the size second array\n");
+    //  scanf("%d",&size2);
+    //  int arr1[size1],arr2[size2];
+    //  printf("Enter first array's element\n");
+    //  for(int i = 0; i < size1; i++)
+    //  {
+    //     printf("%d => ",i);
+    //     scanf("%d",&arr1[i]);
+    //  }
+    //  printf("Enter second array's element\n");
+    //  for (int i = 0; i < size2; i++)
+    //  {
+    //     printf("%d => ",i);
+    //     scanf("%d",&arr2[i]);
+    //  }
      
-    //  printf("Enter string");
-    //  fgets(str,100,stdin);
+    //  int size3 = size1 + size2;
+    //  int arr3[size3];
 
-    //  printf("Enter character");
-    //  scanf("%c",&ch);
- 
-    // search_all_occurrences(str,ch,arr);
-    //   printf("Occurrences of '%c' found at indices: ", ch);
-    // for (int i = 0; arr[i] != -1; i++) {
-    //     printf("%d ", arr[i]);
-    // }
-    // printf("\n");
+    //  merge(arr1,size1,arr2 ,size2,arr3);
+    //  printf("Third array");
+    //  for (int i = 0; i < size3; i++)
+    //  {
+    //     printf("%d",arr3[i]);
+    //  }
 
-// 3. string to upppercase
+// 8. Sort an array of int values
     
-    //    char str[10];
-    //    int length, i;
-    //    fgets(str,10,stdin);                                                                     
-    //    for (i = 0; str[i]; i++);
-    //    length = i-1;
-    
-    //    printf("%d",length);
-    //    printf("%s",str);
+   int ptr[10] = {1,9,2,8,3,7,4,5,6,10};
 
-    //    toUpperCase(str,length);
-    //    printf("%s",str);
+   sort(ptr,10);
    
-//  4.toLower case
-    //    toLowerCase(str,length);
-    //    printf("%s",str);
-
-//  Sub string
-
-     char str[20],substr[20];
-     int start_index, end_index;
-     printf("Enter String");
-     fgets(str,20,stdin);
-     printf("Enter Starting index");
-     scanf("%d",&start_index);
-     printf("Enter end index");
-     scanf("%d",&end_index);
-
-     subString(str,start_index,end_index,substr);
-     printf("Sub string is %s", substr);
+   for (int i = 0; i < 10; i++)
+   {
+    printf("%d",ptr[i]);
+   }
+   
 
 
-   return 0;
+// 9.WRF to move first value of array to the position where all smaller values will be in the left and greater value will be in the righ
+    //    int arr[] = {23,55,12,45,79,11,8,34,20,90};
+
+    //    int loc = middleValue(arr,10);
+    //    printf("%d",loc);
+
+// 10.There are five classes with different number of students in them. Five arrays
+// containing marks of students of each class. Write a function to receive an address
+// of an array of pointers to access marks of all the students. The job of function is to
+// find the highest marks among all the classes.
+
+//    int *ptr[5];  //pointer array 
+//    int arr1[] = {2,5,6,8};
+//    int arr2[] = {9,5,6,3,9,4};
+//    int arr3[] = {9,5,10,3,4};
+//    int arr4[] = {9,4};
+//    int arr5[] = {8,9,2,10};
+
+//    ptr[0] = arr1;
+//    ptr[1] = arr2;
+//    ptr[2] = arr3;
+//    ptr[3] = arr4;
+//    ptr[4] = arr5;
+   
+//    int size[] = {4,6,5,2,4};
+   
+//    highestMarks(ptr,5,size);
+   
+    return 0;
 }
 
-    void subString(char *str, int s,int e, char *substr){
-         int k = 0;
-        for (int i = s; i < e; i++)
+void sort(int *ptr,int size)
+{
+    int i,j,t;
+
+    for ( i = 0; i < size-1; i++)
+    {
+        for ( j = 0; j < size-1-i; j++)
         {
-            substr[k] = str[i];
-            k++;
+            if(ptr[j]>ptr[j+1]){
+                t = ptr[j];
+                ptr[j] = ptr[j+1];
+                ptr[j+1] = t;
+            }
         }
-        substr[k] = '\n';
-         
-    }
-
-char* toUpperCase(char *str, int l ){
-   
-    for (int i = 0; str[i]; i++)
-    {
-        if(str[i] >= 'a' && str[i]<='z'){
-            str[i] = str[i] - 32;
-        } 
-    }
-    return str;
-
-}
-char* toLowerCase(char *str, int l ){
-   
-    for (int i = 0; str[i]; i++)
-    {
-        if(str[i] >= 'A' && str[i]<='Z'){
-            str[i] = str[i] + 32;
-        } 
-    }
-    return str;
-
-}
-
-void search_all_occurrences(char *str, char ch, int *arr){
-      int i ,k = 0;
-      for (i = 0;  str[i] != '\0'; i++)
-      {
-         if(*(str+i) == ch){
-             arr[k] = i;
-             k++;
-         }
-    
-      }
-       arr[k] = -1;
-}
-
-void arrInput(int **p, int n, int size[]){
-   for (int i = 0; i < n; i++)
-   {      printf("Enter %d array elements\n",i);
-          for (int j = 0; j < size[i]; j++)
-          {
-             scanf("%d",*(p+i)+j);
-          }
-          
-   } 
-}
-
-
-void swap(int *a, int *b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void input(int *a, int b){
-    for (int i = 0; i < b; i++)
-    {
-        printf("Enter %d value \n",i+1);
-        scanf("%d",a+i);
+        
     }
     
 }
 
-void display(int *a, int size){
-       for (int i = 0; i < size; i++)
-       {
-         printf(" %d => %d \n",i+1,*(a+i));
-       }
-       
+
+void highestMarks(int *ptr[],int n,int size[]){
+    int highest = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < size[i]; j++)
+        {
+            if(ptr[i][j]>highest)
+               highest = ptr[i][j];
+        }
+        
+    }
+    printf("Highest marks is %d", highest);
 }
 
-int length(char *str){
-    int i;
-    for ( i = 0; *(str+i) ; i++);
-    return i; 
+int middleValue(int arr[], int n)
+{
+    int left = 0;
+    int right = n-1;
+    int loc = 0;
+    while(left < right){
+
+        while(left < right &&  arr[loc] < arr[right])   
+            right--;
+        if(left == right)
+            break;
+        int temp = arr[loc];
+        arr[loc] = arr[right];
+        arr[right] = temp;
+        loc = right;
+        while(left < right && arr[left]<arr[loc])
+           left++;
+        if(left == right)
+            break;   
+        int temp2 = arr[left];
+        arr[left] = arr[loc];
+        arr[loc] = temp;
+        loc = left;
+    }
+    return loc;
 }
 
+void merge(int *arr1, int size1, int *arr2, int size2, int  *arr3){
+ for (int i = 0; i < size1; i++){   
+    arr3[i] = arr1[i];
+ }
+ for (int i = 0; i < size2; i++){   
+    arr3[size1+i] = arr2[i];
+ }
 
+}
 
-
+void swapStr(char *str1, char *str2){
+     char tempStr[20];
+     for(int i=0; i<20;i++){
+        tempStr[i] = *(str1 + i);
+     }
+     for(int i=0; i<20;i++){
+        *(str1 + i) = *(str2 + i);
+     }
+     for(int i=0; i<20;i++){
+         *(str2 + i) = *(tempStr + i);
+     }
+    //  printf("%s",tempStr);
+}
+ 
